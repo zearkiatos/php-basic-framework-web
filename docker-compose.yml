@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: php-basic-framework-web
+    volumes: 
+      - ".:/app"
+    ports:
+      - "8001:8000"
+    tty: true
