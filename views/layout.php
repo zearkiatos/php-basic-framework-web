@@ -29,9 +29,6 @@
                     </li>
                 </ul>
             </div>
-            <!-- <div class="container">
-            <a href="/" class="navbar-brand h1">FW 🐘</a>
-        </div> -->
     </nav>
     <div class="container">
         <div class="row">

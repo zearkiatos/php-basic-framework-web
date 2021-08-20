@@ -2,6 +2,9 @@
 
 namespace App\Http;
 
+use Exception;
+use Throwable;
+
 class Request
 {
     protected $segments = [];
@@ -51,6 +54,16 @@ class Request
             $method
         ]);
 
-        $response->send();
+        try {
+            if ($response instanceof Response) {
+                $response->send();
+            }
+            else {
+                throw new Exception("BOOM!💥:🛑  Error Processing Request");
+            }
+        }
+        catch(Exception $e){
+            echo "Details {$e->getMessage()}";
+        }
     }
 }
